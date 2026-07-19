@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-br" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Otsukimi 🎑 — Traduções de White Album em PT-BR</title>
+    <meta
+      name="description"
+      content="Otsukimi é um grupo de fãs dedicado à tradução de White Album 2 e obras da Leaf para o português do Brasil. Baixe o patch, acompanhe o progresso e leia o blog."
+    />
+    <link rel="canonical" href="https://otsukimi-traducoes.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://otsukimi-traducoes.vercel.app/" />
+    <meta property="og:site_name" content="Otsukimi" />
+    <meta property="og:title" content="Otsukimi 🎑 — Traduções de White Album em PT-BR" />
+    <meta
+      property="og:description"
+      content="Grupo de fãs dedicado à tradução de White Album 2 e obras da Leaf para o português do Brasil. Patch, progresso e blog."
+    />
+    <meta property="og:image" content="https://otsukimi-traducoes.vercel.app/images/wa2/capa_whitealbum22.jpg" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Otsukimi 🎑 — Traduções de White Album em PT-BR" />
+    <meta
+      name="twitter:description"
+      content="Grupo de fãs dedicado à tradução de White Album 2 e obras da Leaf para o português do Brasil. Patch, progresso e blog."
+    />
+    <meta name="twitter:image" content="https://otsukimi-traducoes.vercel.app/images/wa2/capa_whitealbum22.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("otsukimi-theme");
+          var dark = saved ? saved === "dark" : true;
+          document.documentElement.classList.toggle("dark", dark);
+        } catch (e) {
+          /* mantém o tema escuro padrão */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

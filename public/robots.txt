@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://otsukimi-traducoes.vercel.app/sitemap.xml
