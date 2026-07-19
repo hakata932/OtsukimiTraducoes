@@ -26,14 +26,13 @@ Escreva a sinopse aqui.
 
 ## Progresso
 
-- Último progresso em 01/01/2026
-
 | Rota     | Comum | Rota A |
 | -------- | ----- | ------ |
 | Tradução | 50%   | 100%   |
 | Revisão  | 10%   | 0%     |
 
-(Qualquer número com % vira barrinha de progresso automaticamente.)
+(Qualquer número com % vira barrinha de progresso automaticamente. A data de
+"última atualização" aparece sozinha, com base no commit — não escreva data aqui.)
 
 ## Passos de Instalação
 

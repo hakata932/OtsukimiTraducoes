@@ -5,6 +5,9 @@ description: Tradução em PT-BR (Português do Brasil)
 cover: /images/wa2/capa_whitealbum22.jpg
 status: Em andamento
 order: 1
+# Data usada só até existir um commit que mexa apenas nas tabelas de progresso;
+# depois disso a data vem do git automaticamente.
+progressDate: 18/04/2026
 ---
 
 > **Atenção**: Esse é um patch feito de fãs para fãs sem nenhum fim lucrativo. Também não disponibilizamos o jogo aqui, apenas o patch.
@@ -18,8 +21,6 @@ White Album 2 é um romance dramático que acompanha a história destes três pe
 ---
 
 ## Progresso
-
-- Último progresso em 18/04/2026
 
 ### Introductory Chapter
 

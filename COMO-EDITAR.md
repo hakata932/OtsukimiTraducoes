@@ -45,7 +45,7 @@ Abra `src/content/projetos/whitealbum2.md` e procure a seção `## Progresso`. A
 
 - Só troque os números (pode usar vírgula: `87,1%`).
 - O site transforma a tabela inteira em painéis com barrinhas de progresso automaticamente — cada coluna (rota) vira um painel, sem tabela larga na tela.
-- Não esqueça de atualizar a linha "Último progresso em DD/MM/AAAA".
+- **A data de "última atualização de progresso" é automática**: ela vem do commit. Regra importante — pra data atualizar, o commit precisa mexer **só nos números das tabelas**. Se você mudar tabela E texto no mesmo commit, a data não muda (faça em dois commits separados).
 
 ## ✍️ Criando um post no blog
 

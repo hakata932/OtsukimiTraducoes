@@ -3,7 +3,7 @@ import { Markdown } from "@/components/Markdown";
 import { Seo } from "@/components/Seo";
 import { Snowfall } from "@/components/Snowfall";
 import { site } from "@/config/site";
-import { getProject } from "@/lib/content";
+import { getProject, withProgressDate } from "@/lib/content";
 import NotFound from "./NotFound";
 
 export default function Projeto() {
@@ -47,7 +47,7 @@ export default function Projeto() {
       </section>
 
       <article className="mx-auto w-full max-w-3xl px-4 pb-20 pt-4 sm:px-6">
-        <Markdown>{project.body}</Markdown>
+        <Markdown>{withProgressDate(project.body, project.progressDate)}</Markdown>
       </article>
     </>
   );

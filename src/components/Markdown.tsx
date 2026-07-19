@@ -29,6 +29,10 @@ function onlyImages(children: ReactNode): boolean {
   return images > 0;
 }
 
+function textContent(children: ReactNode): string {
+  return textOf(children).replace(/\s+/g, " ").trim();
+}
+
 function countImages(children: ReactNode): number {
   const items = Array.isArray(children) ? children : [children];
   return items.filter((item) => isValidElement(item) && item.type === "img").length;
@@ -121,106 +125,119 @@ function ProgressPanels({ rows }: { rows: string[][] }) {
   );
 }
 
-const components: Components = {
-  h1: ({ children }) => (
-    <h1 className="mt-10 mb-4 font-serif text-3xl font-bold tracking-tight">{children}</h1>
-  ),
-  h2: ({ children }) => (
-    <h2 className="mt-12 mb-4 border-b border-line pb-2 font-serif text-2xl font-semibold tracking-tight">
-      {children}
-    </h2>
-  ),
-  h3: ({ children }) => (
-    <h3 className="mt-8 mb-3 font-serif text-xl font-semibold">{children}</h3>
-  ),
-  h4: ({ children }) => (
-    <h4 className="mt-7 mb-2 font-serif font-semibold text-accent">{children}</h4>
-  ),
-  h5: ({ children }) => (
-    <h5 className="mt-6 mb-2 text-sm font-bold uppercase tracking-widest text-mist">{children}</h5>
-  ),
-  p: ({ children }) => {
-    if (onlyImages(children)) {
-      const grid =
-        countImages(children) > 1 ? "grid gap-4 sm:grid-cols-2 lg:grid-cols-3" : "flex justify-center";
-      return <div className={`my-6 ${grid}`}>{children}</div>;
-    }
-    return <p className="my-4 leading-7">{children}</p>;
-  },
-  a: ({ href = "", children }) => {
-    const external = /^https?:\/\//.test(href);
-    return (
-      <a
-        href={href}
-        {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-        className="font-medium text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent"
+export function Markdown({ children }: { children: string }) {
+  let skipNextHeadingBorder = false;
+
+  const components: Components = {
+    h1: ({ children }) => (
+      <h1 className="mt-10 mb-4 font-serif text-3xl font-bold tracking-tight">{children}</h1>
+    ),
+    h2: ({ children }) => (
+      <h2
+        className={
+          skipNextHeadingBorder
+            ? "mt-12 mb-4 font-serif text-2xl font-semibold tracking-tight"
+            : "mt-12 mb-4 border-b border-line pb-2 font-serif text-2xl font-semibold tracking-tight"
+        }
       >
         {children}
-      </a>
-    );
-  },
-  img: ({ src = "", alt = "" }) => (
-    <img
-      src={typeof src === "string" ? src : ""}
-      alt={alt}
-      loading="lazy"
-      className="max-h-[32rem] w-full rounded-md border border-line object-contain"
-    />
-  ),
-  blockquote: ({ children }) => (
-    <blockquote className="my-6 rounded-r-md border-l-2 border-accent bg-surface-2 px-5 py-3 text-mist [&_p]:my-2">
-      {children}
-    </blockquote>
-  ),
-  ul: ({ children }) => <ul className="my-4 list-disc space-y-1.5 pl-6">{children}</ul>,
-  ol: ({ children }) => <ol className="my-4 list-decimal space-y-1.5 pl-6">{children}</ol>,
-  li: ({ children }) => <li className="leading-7">{children}</li>,
-  hr: () => <hr className="my-10 border-line" />,
-  em: ({ children }) => <em className="text-mist">{children}</em>,
-  code: ({ children }) => (
-    <code className="rounded bg-surface-2 px-1.5 py-0.5 font-mono text-[0.9em]">{children}</code>
-  ),
-  pre: ({ children }) => (
-    <pre className="my-6 overflow-x-auto rounded-md border border-line bg-surface-2 p-4 text-sm">
-      {children}
-    </pre>
-  ),
-  table: ({ node, children }) => {
-    const rows = node ? tableMatrix(node) : [];
-    if (isProgressMatrix(rows)) return <ProgressPanels rows={rows} />;
-    return (
-      <div className="my-6 overflow-x-auto rounded-lg border border-line">
-        <table className="w-full text-sm">{children}</table>
-      </div>
-    );
-  },
-  th: ({ children }) => (
-    <th className="bg-surface-2 px-3 py-2.5 text-left font-semibold whitespace-nowrap">{children}</th>
-  ),
-  td: ({ children }) => {
-    const text = textOf(children).trim();
-    const match = text.match(PERCENT);
-    if (match) {
-      const value = Math.min(100, parseFloat(match[1].replace(",", ".")));
+      </h2>
+    ),
+    h3: ({ children }) => (
+      <h3 className="mt-8 mb-3 font-serif text-xl font-semibold">{children}</h3>
+    ),
+    h4: ({ children }) => (
+      <h4 className="mt-7 mb-2 font-serif font-semibold text-accent">{children}</h4>
+    ),
+    h5: ({ children }) => (
+      <h5 className="mt-6 mb-2 text-sm font-bold uppercase tracking-widest text-mist">{children}</h5>
+    ),
+    p: ({ children }) => {
+      const text = textContent(children);
+      if (text.startsWith("Última atualização de progresso em ")) {
+        skipNextHeadingBorder = true;
+        return <p className="mt-2 text-[0.6rem] italic leading-none text-mist/75 no-underline">{children}</p>;
+      }
+      if (onlyImages(children)) {
+        const grid =
+          countImages(children) > 1 ? "grid gap-4 sm:grid-cols-2 lg:grid-cols-3" : "flex justify-center";
+        return <div className={`my-6 ${grid}`}>{children}</div>;
+      }
+      return <p className="my-4 leading-7">{children}</p>;
+    },
+    a: ({ href = "", children }) => {
+      const external = /^https?:\/\//.test(href);
       return (
-        <td className="border-t border-line px-3 py-2.5">
-          <div className="flex min-w-20 items-center gap-1.5">
-            <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-line">
-              <div
-                className={`h-full rounded-full ${value >= 100 ? "bg-accent" : "bg-accent/70"}`}
-                style={{ width: `${value}%` }}
-              />
-            </div>
-            <span className="shrink-0 text-right text-xs tabular-nums text-mist">{text}</span>
-          </div>
-        </td>
+        <a
+          href={href}
+          {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          className="font-medium text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent"
+        >
+          {children}
+        </a>
       );
-    }
-    return <td className="border-t border-line px-3 py-2.5">{children}</td>;
-  },
-};
+    },
+    img: ({ src = "", alt = "" }) => (
+      <img
+        src={typeof src === "string" ? src : ""}
+        alt={alt}
+        loading="lazy"
+        className="max-h-[32rem] w-full rounded-md border border-line object-contain"
+      />
+    ),
+    blockquote: ({ children }) => (
+      <blockquote className="my-6 rounded-r-md border-l-2 border-accent bg-surface-2 px-5 py-3 text-mist [&_p]:my-2">
+        {children}
+      </blockquote>
+    ),
+    ul: ({ children }) => <ul className="my-4 list-disc space-y-1.5 pl-6">{children}</ul>,
+    ol: ({ children }) => <ol className="my-4 list-decimal space-y-1.5 pl-6">{children}</ol>,
+    li: ({ children }) => <li className="leading-7">{children}</li>,
+    hr: () => <hr className="my-10 border-line" />,
+    em: ({ children }) => <em className="text-mist">{children}</em>,
+    code: ({ children }) => (
+      <code className="rounded bg-surface-2 px-1.5 py-0.5 font-mono text-[0.9em]">{children}</code>
+    ),
+    pre: ({ children }) => (
+      <pre className="my-6 overflow-x-auto rounded-md border border-line bg-surface-2 p-4 text-sm">
+        {children}
+      </pre>
+    ),
+    table: ({ node, children }) => {
+      const rows = node ? tableMatrix(node) : [];
+      if (isProgressMatrix(rows)) return <ProgressPanels rows={rows} />;
+      return (
+        <div className="my-6 overflow-x-auto rounded-lg border border-line">
+          <table className="w-full text-sm">{children}</table>
+        </div>
+      );
+    },
+    th: ({ children }) => (
+      <th className="bg-surface-2 px-3 py-2.5 text-left font-semibold whitespace-nowrap">{children}</th>
+    ),
+    td: ({ children }) => {
+      const text = textOf(children).trim();
+      const match = text.match(PERCENT);
+      if (match) {
+        const value = Math.min(100, parseFloat(match[1].replace(",", ".")));
+        return (
+          <td className="border-t border-line px-3 py-2.5">
+            <div className="flex min-w-20 items-center gap-1.5">
+              <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-line">
+                <div
+                  className={`h-full rounded-full ${value >= 100 ? "bg-accent" : "bg-accent/70"}`}
+                  style={{ width: `${value}%` }}
+                />
+              </div>
+              <span className="shrink-0 text-right text-xs tabular-nums text-mist">{text}</span>
+            </div>
+          </td>
+        );
+      }
+      return <td className="border-t border-line px-3 py-2.5">{children}</td>;
+    },
+  };
 
-export function Markdown({ children }: { children: string }) {
   return (
     <div className="text-[0.975rem] text-ink/95">
       <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>

@@ -9,6 +9,10 @@
 // - Sem "description"? O site usa o começo do texto.
 // - Caminho de imagem sem "/" no início é corrigido sozinho.
 
+import progressDatesJson from "@/generated/progress-dates.json";
+
+const PROGRESS_DATES = progressDatesJson as Record<string, string | undefined>;
+
 export interface Post {
   slug: string;
   title: string;
@@ -29,6 +33,7 @@ export interface Project {
   status?: string;
   order: number;
   body: string;
+  progressDate?: string; // DD/MM/AAAA, vinda do git (scripts/build-progress-dates.mjs)
 }
 
 export interface Page {
@@ -168,6 +173,7 @@ export function listProjects(): Project[] {
         status: meta.status,
         order: Number(meta.order) || 99,
         body,
+        progressDate: PROGRESS_DATES[slug] ?? meta.progressDate,
       };
     });
   return projects.sort((a, b) => a.order - b.order);
@@ -189,6 +195,27 @@ export async function getPage(slug: string): Promise<Page | undefined> {
     description: meta.description ?? fallbackDescription(body),
     body,
   };
+}
+
+// Injeta a linha "Última atualização de progresso em ..." no fim da seção
+// "## Progresso" (antes do próximo "## " ou "---"). A data vem do commit que
+// mexeu só nas tabelas — ninguém precisa atualizá-la à mão.
+export function withProgressDate(markdown: string, date: string | undefined): string {
+  if (!date) return markdown;
+  const lines = markdown.split("\n");
+  const start = lines.findIndex((line) => /^##\s+Progresso\b/i.test(line.trim()));
+  if (start === -1) return markdown;
+
+  let end = lines.length;
+  for (let i = start + 1; i < lines.length; i++) {
+    const trimmed = lines[i].trim();
+    if (/^##\s/.test(trimmed) || /^---+$/.test(trimmed)) {
+      end = i;
+      break;
+    }
+  }
+  lines.splice(end, 0, "", `Última atualização de progresso em ${date}`);
+  return lines.join("\n");
 }
 
 export function formatDate(date: string): string {

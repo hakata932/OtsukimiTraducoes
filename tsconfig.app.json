@@ -9,6 +9,7 @@
     "skipLibCheck": true,
 
     "moduleResolution": "bundler",
+    "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
@@ -20,6 +21,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
+    "ignoreDeprecations": "5.0",
 
     "baseUrl": ".",
     "paths": {
