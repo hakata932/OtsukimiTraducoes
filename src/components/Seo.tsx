@@ -10,7 +10,7 @@ interface SeoProps {
 
 // React 19 move <title>/<meta>/<link> renderizados em componentes para o <head>.
 export function Seo({ title, description, path = "/", image, type = "website" }: SeoProps) {
-  const fullTitle = title ? `${title} · ${site.name}` : `${site.name} ${site.emoji} — Traduções de White Album em PT-BR`;
+  const fullTitle = title ? `${title} · ${site.name}` : `${site.name} — Traduções de White Album em PT-BR`;
   const desc = description ?? site.description;
   const url = `${site.url}${path}`;
   const img = image ? `${site.url}${image}` : `${site.url}/images/wa2/capa_whitealbum22.jpg`;

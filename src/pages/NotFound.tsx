@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Seo } from "@/components/Seo";
-import { site } from "@/config/site";
+import { TsukimiIcon } from "@/components/TsukimiIcon";
 
 export default function NotFound() {
   return (
@@ -14,9 +14,9 @@ export default function NotFound() {
         </p>
         <Link
           to="/"
-          className="mt-6 text-sm font-medium text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent"
+          className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent"
         >
-          Voltar ao início {site.emoji}
+          Voltar ao início <TsukimiIcon className="h-4 w-4" />
         </Link>
       </div>
     </>

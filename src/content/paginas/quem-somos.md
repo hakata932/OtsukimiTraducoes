@@ -1,18 +1,25 @@
 ---
 title: Quem somos?
-description: Conheça a Otsukimi, grupo de fãs dedicado à tradução de White Album 2 e obras da Leaf para o português do Brasil.
+description: Conheça a Otsukimi Traduções, grupo dedicado a centralizar traduções de White Album 2 e outras obras da Leaf para o português brasileiro.
 ---
 
-Somos a **Otsukimi** 🎑 — um grupo de fãs dedicado à tradução de **White Album 2** e das obras da **Leaf** para o português do Brasil. O nome é uma homenagem ao *otsukimi*, o festival japonês de contemplação da lua: assim como a Hanabi celebra os fogos de verão, nós celebramos a lua de outono.
+A **Otsukimi Traduções** é um grupo criado com a intenção de centralizar traduções de conteúdos envolvendo **White Album 2** e outras obras da **Leaf** para o português brasileiro.
 
-O grupo nasceu do time responsável pela tradução de White Album 2, que decidiu criar uma casa própria para reunir tudo que envolve a obra — patch, materiais e novidades — do mesmo jeito que outros grupos reúnem tudo de suas franquias favoritas.
+## Nossa origem
 
-Nosso principal objetivo é tornar essa mídia mais acessível e alcançar o maior número possível de pessoas com nossas traduções. Como somos uma fansub sem nenhum interesse monetário, nossos patches são completamente gratuitos, livres de incômodos como redirecionamentos de anúncios e afins.
+O nome *Otsukimi* originou-se de um evento tradicional do Japão: entre setembro e outubro é realizado um festival venerando a lua cheia, que em eras passadas contava até com recitação de poesias e composição de músicas dedicadas à lua ([saiba mais sobre o festival](https://www.japaoemfoco.com/tsukimi-festival-da-lua-cheia-do-outono/)). O nome foi escolhido por indicação de um dos nossos membros, e acabou coincidindo com a criação deste grupo.
 
-## Como você pode nos apoiar?
+Nascemos da equipe que começou com o projeto de White Album 2 na [HanabiWorks](https://hanabiworks.github.io/), mas não possuímos mais nenhuma relação direta com ela — a Otsukimi é um grupo inteiramente novo e independente.
 
-É simples! Basta compartilhar nossos projetos com mais pessoas. Quanto mais vocês comentam e nos oferecem críticas construtivas sobre as traduções, melhor será o resultado final!
+## Nossos membros
 
-Se quiser ajudar diretamente em algum projeto com tradução, revisão, edição de imagem ou programação, fique de olho no nosso [blog](/blog) — é por lá que anunciamos novidades e oportunidades de colaborar.
+- **Hakata** — Líder, tradutor, revisor e adaptações
+- **Gopicolo** — Líder de White Album 2, tradutor e programador
+- **Cãomunista** (Fate Café) — Desenvolvedor
+- E todos da equipe de White Album 2!
 
-Lembrando: não disponibilizamos nenhum jogo aqui ou conteúdo pirata. Somos apenas um grupo de traduções amador.
+## Como podemos apoiar?
+
+Siga-nos nas redes sociais e acompanhe nosso progresso tanto por lá quanto por aqui. Temos também um [blog](/blog), onde você poderá acompanhar e saber dos nossos bastidores: "Como estão os projetos? Do que gostamos? Como vamos?" — são perguntas que serão respondidas por lá!
+
+**Lembrete:** não disponibilizamos os jogos, não somos um grupo de pirataria e nem a apoiamos. Todos os arquivos que oferecemos só funcionam para quem já possui o jogo adquirido.

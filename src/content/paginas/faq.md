@@ -17,7 +17,7 @@ Não. Disponibilizamos apenas os patches de tradução — você precisa ter o j
 
 #### Onde posso comprar os jogos?
 
-Se quiser digital, use VPN para algum local do Japão e compre pelo Fanza, ou adquira uma cópia física em plataformas como Zenmarket, Neokyo e afins.
+Vai depender de que jogo estamos traduzindo. Se não estiver disponível na Steam — como é o caso de White Album 2 —, terá de procurar em outras lojas: sites de usados (Mercari, Zenmarket) ou lojas de jogos digitais como a Fanza (requer VPN com opção de local no Japão). Na via das dúvidas, isso estará detalhado na página de cada projeto.
 
 #### Onde baixo o patch de White Album 2?
 
@@ -29,4 +29,4 @@ Pelo nosso [blog](/blog) — é lá que publicamos anúncios, progresso e bastid
 
 #### Posso ajudar nas traduções?
 
-Pode! Se quiser contribuir com tradução, revisão, edição de imagem ou programação, fique de olho no [blog](/blog): quando abrirmos vagas ou canais de contato, é por lá que anunciamos.
+No momento, não precisamos de pessoas. Mas fique de olho no [blog](/blog): futuramente podemos anunciar projetos que vão precisar de ajuda, e faremos testes com os candidatos que acharmos interessantes.

@@ -5,6 +5,7 @@ import { site } from "@/config/site";
 import { listProjects } from "@/lib/content";
 import { SocialIcons } from "./SocialIcons";
 import { ThemeToggle } from "./ThemeToggle";
+import { TsukimiIcon } from "./TsukimiIcon";
 
 const NAV_AFTER = [
   { to: "/blog", label: "Blog" },
@@ -32,9 +33,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-line bg-bg/85 backdrop-blur">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-2 px-4 py-3 sm:px-6">
         <Link to="/" className="group flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <span className="text-2xl leading-none transition-transform group-hover:scale-110">
-            {site.emoji}
-          </span>
+          <TsukimiIcon className="h-6 w-6 transition-transform group-hover:scale-110" />
           <span className="flex flex-col">
             <span className="font-serif text-lg font-bold tracking-tight">{site.name}</span>
             <span className="hidden text-[11px] leading-tight text-mist sm:block">

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { site } from "@/config/site";
+import { TsukimiIcon } from "./TsukimiIcon";
 
 export function Footer() {
   return (
@@ -7,7 +8,8 @@ export function Footer() {
       <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
         <h2 className="font-serif text-lg font-semibold text-ink">Sobre nós</h2>
         <p className="mt-3 max-w-2xl text-sm leading-6 text-mist">
-          A {site.name} {site.emoji} é um grupo de fãs dedicado à tradução de White Album 2 e
+          A {site.name} <TsukimiIcon className="inline-block h-4 w-4 align-[-0.125em]" /> é um
+          grupo de fãs dedicado à tradução de White Album 2 e
           obras da Leaf para o português do Brasil — sem fins lucrativos e sem afiliação oficial.{" "}
           <Link to="/quem-somos" className="font-medium text-accent hover:underline">
             Conheça o grupo

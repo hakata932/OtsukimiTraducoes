@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Seo } from "@/components/Seo";
+import { TsukimiIcon } from "@/components/TsukimiIcon";
 import { formatDate, listPosts } from "@/lib/content";
 
 export default function Blog() {
@@ -24,7 +25,10 @@ export default function Blog() {
 
         <div className="mt-6 divide-y divide-line border-t border-line">
           {posts.length === 0 ? (
-            <p className="py-10 text-mist">Ainda não há publicações por aqui. Volte em breve! 🎑</p>
+            <p className="py-10 text-mist">
+              Ainda não há publicações por aqui. Volte em breve!{" "}
+              <TsukimiIcon className="inline-block h-4 w-4 align-[-0.125em]" />
+            </p>
           ) : null}
 
           {posts.map((post) => (
