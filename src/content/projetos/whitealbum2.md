@@ -31,14 +31,14 @@ White Album 2 é um romance dramático que acompanha a história destes três pe
 
 ### Closing Chapter
 
-| Rota     | Comum | Koharu | Chiaki | Mari  | Setsuna 1 |
+| Rota     | Comum | Koharu | Chiaki | Mari  | Setsuna |
 | -------- | ----- | ------ | ------ | ----- | --------- |
 | Tradução | 21,4% | 100%   | 16,5%  | 87,1% | 100%      |
 | Revisão  | 8,1%  | 10%   | 3,4%   | 0%    | 0%        |
 
 ### CODA
 
-| Rota     | Comum | Setsuna 2 | Kazusa Normal | Kazusa True |
+| Rota     | Comum | Setsuna True | Kazusa Normal | Kazusa True |
 | -------- | ----- | --------- | ------------- | ----------- |
 | Tradução | 0%    | 0%        | 0%            | 0%          |
 | Revisão  | 0%    | 0%        | 0%            | 0%          |
@@ -49,7 +49,7 @@ White Album 2 é um romance dramático que acompanha a história destes três pe
 
 Baixe o [patch](https://9VXPjv.short.gy/DiA0es) e extraia na pasta do jogo, substituindo os arquivos originais.
 
-Use o arquivo `pt` dentro dele.
+Use o executável `pt` dentro dele.
 
 ---
 
@@ -69,7 +69,7 @@ Se quiser digital, use VPN para algum local do Japão e compre pelo Fanza, ou ad
 
 #### Notei que algumas letras não têm acento, isso é algum erro de digitação?
 
-Infelizmente, caracteres em maiúsculo como `Á`, `À` e `Í` tiveram que ficar de fora por limitação da fonte que o jogo vem por padrão. Todos os acentos que estão no jogo existem por substituições que fizemos por caracteres já existentes (como cifra, asterisco, por aí vai). Fizemos essas substituições até restar apenas caracteres essenciais que não podemos remover, com apenas `Á` de essencial ficando de fora (usado, por exemplo, em "Áustria").
+Infelizmente, caracteres em maiúsculo como `Á`, `À` e `Í` tiveram que ficar de fora por limitação da fonte que o jogo vem por padrão. Todos os acentos que estão no jogo existem por substituições que fizemos por caracteres já existentes (como cifra, asterisco, por aí vai). Fizemos essas substituições até restar apenas caracteres essenciais que não podemos remover, com apenas `Á` de importante ficando de fora (coitada da palavra "Áustria"...).
 
 ---
 
@@ -86,17 +86,22 @@ Infelizmente, caracteres em maiúsculo como `Á`, `À` e `Í` tiveram que ficar 
 
 ##### Agradecimentos
 
-- Todokanai Translations, pela fonte de texto e a tradução em inglês.
+- Todokanai Translations, por toda a base que usamos para a tradução (textos, modificações, ferramentas).
 - Neko Belmont, Sagachi Belmont e Mysteriozo pelo [trailer com Todokanai Koi cantada em Português](https://youtu.be/rCIgxjwJsLg) existir.
-- E para o AbdAlgani, pela ajuda com as [ferramentas](https://github.com/abdalgani1/).
+- AbdAlgani, pela ajuda com as [ferramentas](https://github.com/abdalgani1/).
 
 ---
 
 ## Imagens
 
 ![Cena de White Album 2 traduzida](/images/wa2/CG_WA2-4.webp)
+
 ![Cena de White Album 2 traduzida](/images/wa2/CG_WA2-5.webp)
+
 ![Cena de White Album 2 traduzida](/images/wa2/CG_WA2-6.webp)
+
 ![Cena de White Album 2 traduzida](/images/wa2/CG_WA2-7.webp)
+
 ![Cena de White Album 2 traduzida](/images/wa2/CG_WA2-11.webp)
+
 ![Cena de White Album 2 traduzida](/images/wa2/CG_WA2-9.webp)

@@ -13,7 +13,7 @@ Não! Nossos patches são completamente gratuitos, sem fins lucrativos, sem anú
 
 #### Vocês disponibilizam os jogos?
 
-Não. Disponibilizamos apenas os patches de tradução — você precisa ter o jogo original. Não apoiamos pirataria.
+Não. Disponibilizamos apenas os patches de tradução, você precisa ter o jogo original. Não apoiamos pirataria.
 
 #### Onde posso comprar os jogos?
 
@@ -25,8 +25,8 @@ Na página do projeto: [White Album 2](/projetos/whitealbum2). Lá você encontr
 
 #### Como acompanho as novidades?
 
-Pelo nosso [blog](/blog) — é lá que publicamos anúncios, progresso e bastidores das traduções.
+Pelo nosso [blog](/blog) ou pelas redes sociais, é lá que publicamos anúncios, progresso e postagens do blog.
 
 #### Posso ajudar nas traduções?
 
-No momento, não precisamos de pessoas. Mas fique de olho no [blog](/blog): futuramente podemos anunciar projetos que vão precisar de ajuda, e faremos testes com os candidatos que acharmos interessantes.
+No momento, não precisamos de pessoas. Mas fique de olho nas redes sociais: futuramente podemos anunciar projetos que vão precisar de ajuda, e faremos testes com os candidatos que acharmos interessantes.
