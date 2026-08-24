@@ -27,12 +27,12 @@ Ademais, fora White Album 2, já temos um certo alinhamento de projetos para o f
 
 > "O que nos aguarda para o futuro?"
 
-Para 2027 almejamos lançar um patch com closing traduzido e revisado, somado às novas imagens traduzidas. Paralelamente, o Manolo-chan, da Kikachan, planeja traduzir Shizuku em breve; o Cãomunista, do Fate Café, deseja começar um projeto de tradução de Utawarerumono — tudo para o ano de 2027.
+Para 2027 almejamos lançar um patch com closing traduzido e revisado, somado às novas imagens traduzidas. Paralelamente, o Manolo-chan, da Kikachan, planeja traduzir Shizuku em breve; o Cãomunista, do Fate Café, deseja começar um projeto de tradução de Utawarerumono — tudo para o ano de 2027. Espere todos estes lançamentos aqui na Otsukimi para um futuro relativamente breve!
 
 Se deseja ajudar com algo, mande mensagem para qualquer um de nós pelas redes sociais (como o X ou Discord) e iremos conversar sobre com todo prazer!
 
 White Album 2 ainda vai demorar para sair do forno completo, dado o quão grande o jogo é. Para evitar uma situação comum onde partes da leitura se destoam demais por questão de estilo de diferentes tradutores, uma revisão minuciosa é necessária; logo, não esperem isso estar completo tão cedo.
 
-Da minha parte, como redator, não vejo mais o que há de ser escrito. Para aqueles que nos acompanham por White Album 2, também posso informar que temos as ferramentas para mexer na versão da Steam do primeiro jogo (vulgo o remake de White Album que saiu para consoles e, depois, para o PC). Se alguém quiser traduzi-lo, ou começar qualquer outro projeto, pode falar conosco, que iremos conversar melhor.
+Da minha parte, como redator, não vejo mais o que há de ser escrito. Para aqueles que nos acompanham por White Album 2, também posso informar que possuímos todas as ferramentas para mexer na versão da Steam do primeiro jogo (vulgo o remake de White Album, que saiu para consoles e, depois, para o PC). Se alguém quiser traduzi-lo, ou começar qualquer outro projeto, fiquem de olho, pois a hora certa vai chegar logo, logo.
 
 Por fim, desejo a todos um ótimo dia!
