@@ -33,8 +33,8 @@ White Album 2 é um romance dramático que acompanha a história destes três pe
 
 | Rota     | Comum | Koharu | Chiaki | Mari  | Setsuna |
 | -------- | ----- | ------ | ------ | ----- | --------- |
-| Tradução | 21,4% | 100%   | 16,5%  | 87,1% | 100%      |
-| Revisão  | 8,1%  | 10%   | 3,4%   | 0%    | 0%        |
+| Tradução | 23,5% | 100%   | 18,3%  | 87,1% | 100%      |
+| Revisão  | 10,2%  | 14%   | 3,4%   | 0%    | 2,2%        |
 
 ### CODA
 

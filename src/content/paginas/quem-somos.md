@@ -13,7 +13,7 @@ Nascemos da equipe que começou com o projeto de White Album 2 na [HanabiWorks](
 
 ## Nossos membros
 
-- **Hakata** — Líder, tradutor, revisor e adaptações de música
+- **Hakata** — Líder, tradutor, revisor e letrista
 - **Gopicolo** — Segundo líder de White Album 2, tradutor e programador
 - **Cãomunista** (Fate Café) — Desenvolvedor
 - E todos da equipe de White Album 2
