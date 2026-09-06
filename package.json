@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/build-progress-dates.mjs && tsc -b && vite build",
+    "build": "node scripts/check-content.mjs && node scripts/build-progress-dates.mjs && tsc -b && vite build",
+    "check": "node scripts/check-content.mjs",
     "progress-dates": "node scripts/build-progress-dates.mjs",
     "preview": "vite preview"
   },

@@ -11,7 +11,7 @@ Todo o conteúdo fica em arquivos de texto simples (Markdown, `.md`). Você edit
 
 ### Editando direto pelo navegador (jeito mais fácil)
 
-1. Abra o repositório no GitHub: `https://github.com/ThiagoKrz/OtsukimiTraducoes`
+1. Abra o repositório no GitHub: `https://github.com/hakata932/OtsukimiTraducoes`
 2. Navegue até o arquivo que quer mudar (veja o mapa abaixo).
 3. Clique no ícone de **lápis** (✏️ "Edit this file") no canto direito.
 4. Faça a mudança, desça a página e clique em **"Commit changes"**.
@@ -45,7 +45,19 @@ Abra `src/content/projetos/whitealbum2.md` e procure a seção `## Progresso`. A
 
 - Só troque os números (pode usar vírgula: `87,1%`).
 - O site transforma a tabela inteira em painéis com barrinhas de progresso automaticamente — cada coluna (rota) vira um painel, sem tabela larga na tela.
-- **A data de "última atualização de progresso" é automática**: ela vem do commit. Regra importante — pra data atualizar, o commit precisa mexer **só nos números das tabelas**. Se você mudar tabela E texto no mesmo commit, a data não muda (faça em dois commits separados).
+### A data de "última atualização de progresso"
+
+No topo do arquivo existe uma linha assim:
+
+```markdown
+progressDate: 31/08/2026
+```
+
+**Enquanto essa linha existir, é ela que aparece no site.** Ao atualizar os números, mude também essa data — sempre no formato dia/mês/ano.
+
+Se você apagar a linha, a data passa a ser deduzida sozinha do histórico do GitHub. Nesse modo automático vale uma regra: só conta o commit que mexeu **apenas nos números das tabelas**. Se mudar tabela e texto no mesmo commit, a data não se move.
+
+> ⚠️ Nunca edite o arquivo `src/generated/progress-dates.json`. Ele é recriado a cada publicação e qualquer mudança feita nele é descartada.
 
 ## ✍️ Criando um post no blog
 
@@ -83,6 +95,7 @@ Mais texto. Para **negrito** use asteriscos duplos, para *itálico* use um aster
 
 - `thumbnail`, `author` e até `description` são opcionais — pode apagar as linhas se não tiver (sem description, o site usa o começo do texto).
 - A data pode ser escrita como `2026-08-15` **ou** `15/08/2026` — os dois funcionam.
+  > ⚠️ Atenção ao formato americano: `08/22/2026` **não** funciona, porque o site lê `dia/mês/ano`. Para 22 de agosto, escreva `2026-08-22` ou `22/08/2026`. (Se errar, a publicação para e avisa — veja abaixo.)
 - O post aparece automaticamente na lista do blog e na home, com data e tempo de leitura calculados sozinhos. **Todo arquivo `.md` na pasta vira um post** — não precisa registrar em lugar nenhum.
 
 ## 🖼️ Adicionando imagens
@@ -138,9 +151,19 @@ social: {
 
 Link vazio (`""`) = o ícone não aparece no site. É só colar o link quando o canal existir.
 
+## ✅ A conferência automática
+
+Antes de publicar, o site confere sozinho o que você escreveu e **para a publicação** se achar algo errado:
+
+- post sem título, ou com data que não existe no calendário;
+- `progressDate` fora do formato dia/mês/ano;
+- imagem citada (thumbnail, cover ou no meio do texto) que não está em `public/`.
+
+Quando isso acontece, o painel da Vercel mostra a mensagem dizendo o arquivo e o que corrigir — e **nada é publicado**, o site continua no ar como estava. É só corrigir e salvar de novo.
+
 ## 🆘 Deu errado?
 
 - O site não atualizou? Espere 2 minutos e recarregue com `Ctrl+F5`.
-- Ainda nada? Veja no painel da Vercel se o *deploy* falhou — geralmente é um erro de digitação no bloco entre `---` no topo do arquivo (o "frontmatter"). Confira se cada linha tem o formato `chave: valor`.
+- Ainda nada? Veja no painel da Vercel se o *deploy* falhou. Se a mensagem começar com `[check-content]`, ela já diz exatamente o arquivo e o que arrumar. Fora isso, geralmente é erro de digitação no bloco entre `---` no topo do arquivo (o "frontmatter"): confira se cada linha tem o formato `chave: valor`.
 - Tabela quebrada? Confira se todas as linhas têm o mesmo número de barras verticais `|`.
 - Na dúvida, chame quem cuida da parte técnica do grupo. 🎑
