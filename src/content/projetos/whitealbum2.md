@@ -5,9 +5,10 @@ description: Tradução em PT-BR (Português do Brasil)
 cover: /images/wa2/capa_whitealbum22.jpg
 status: Em andamento
 order: 1
-# Data usada só até existir um commit que mexa apenas nas tabelas de progresso;
-# depois disso a data vem do git automaticamente.
-progressDate: 18/04/2026
+# Data da última atualização de progresso, no formato DD/MM/AAAA.
+# Tem prioridade: enquanto esta linha existir, é ela que aparece no site.
+# Apague a linha para a data voltar a ser deduzida do git automaticamente.
+progressDate: 31/08/2026
 ---
 
 > **Atenção**: Esse é um patch feito de fãs para fãs sem nenhum fim lucrativo. Também não disponibilizamos o jogo aqui, apenas o patch.

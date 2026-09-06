@@ -1,6 +1,6 @@
 ---
 title: Bem-vindos a Otsukimi Traduções!
-date: 08/22/2026
+date: 2026-08-22
 description: 
 tags: vn, anúncio
 author: Hakata

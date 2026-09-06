@@ -6,10 +6,13 @@
 // EXCLUSIVAMENTE em linhas de tabela (linhas começando com "|") e que tenham
 // pelo menos um "%". Commit que também mexeu em texto NÃO atualiza a data.
 //
-// Fallbacks, nesta ordem, quando o git não encontra um commit assim (repo raso
-// na Vercel, arquivo recém-criado etc.):
-//   1. valor que já estava no JSON gerado anteriormente (commitado no repo);
-//   2. campo "progressDate" do frontmatter do próprio .md.
+// Prioridade da data, de cima para baixo:
+//   1. campo "progressDate" do frontmatter do .md (ajuste manual, sempre vence);
+//   2. commit encontrado pela regra acima;
+//   3. valor que já estava no JSON gerado anteriormente (commitado no repo).
+//
+// Ou seja: para fixar a data à mão, edite o "progressDate" no .md do projeto —
+// nunca o JSON gerado, que é reescrito a cada build.
 
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
@@ -94,7 +97,7 @@ for (const file of fs.readdirSync(PROJECTS_DIR).sort()) {
     console.warn(`[progress-dates] git indisponível para ${file}: ${error.message}`);
   }
 
-  const date = fromGit ?? previous[slug] ?? frontmatterField(raw, "progressDate");
+  const date = frontmatterField(raw, "progressDate") ?? fromGit ?? previous[slug];
   if (date) result[slug] = date;
 }
 
